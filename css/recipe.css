@@ -1,0 +1,81 @@
+.recipe-container{
+    margin: 100px 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.input-container{
+    width: 100%;
+}
+
+.input-container input{
+    width: 95%;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid gray;
+}
+
+.meal-container{
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+
+}
+.meal-container img{
+    width: 50%;
+    height: 400px;
+}
+.meal-container h1{
+    font-family: cursive;
+    color: var(--green);
+    font-weight: bold;
+    font-size: 40px;
+    background-color: var(--yellow);
+    padding: 20px 50px;
+   
+}
+.meal-container .row{
+   border-top: 20px solid var(--yellow); 
+   border-bottom: 20px solid var(--yellow); 
+   padding: 20px 0px;
+   display: flex;
+   width: 50%;
+   justify-content: space-between;
+   font-size: 1.2rem;
+}
+.meal-container .row span{
+    color: var(--green);
+    font-weight: bold;
+    
+}
+
+.meal-container .instructions,
+.meal-container .ingredients
+{
+    width: 50%;
+    font-size: 1.2rem;
+}
+
+.ingredients h3, .instructions h3{
+    color: var(--green);
+    font-weight: bold;
+}
+
+
+
+.meal-container .ingredients ul{
+    margin-left: 20px;
+    column-count: 2;
+    column-gap: 70px;
+}
+

@@ -1,0 +1,126 @@
+.hero-container{
+    position: relative;
+    height: 90vh;
+
+    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+
+    gap: 50px;
+}
+
+.hero-container::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/hero-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    z-index: -1;
+
+}
+
+.hero-container h1{
+    font-size: 60px;
+    color: var(--green);
+}
+
+.hero-container p{
+    font-size: 20px;
+}
+
+.hero-container .leftBox{
+    width: 50%;
+    animation: slide-in-left 1.0s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.hero-container .rightBox{
+    width: 50%;
+}
+
+
+
+/*.hero-container .rightBox .box{
+   
+}
+
+*/
+
+div .boxTop{
+    rotate: 8deg;
+    animation: slide-in-top 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    
+}
+
+div .boxBottom{
+    rotate: -8deg;
+    animation: slide-in-bottom 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+.hero-container img{
+    width: 450px;
+    height: 250px;
+    background-color: var(--white);
+    padding: 20px;
+   
+
+    border-radius: 20px;
+    border: 1px solid gray;
+    object-fit: cover;
+}
+
+
+  @keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-1000px);
+              transform: translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+
+ 
+  @keyframes slide-in-top {
+    0% {
+      -webkit-transform: translateY(-1000px);
+              transform: translateY(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-bottom {
+    0% {
+      -webkit-transform: translateY(1000px);
+              transform: translateY(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  
