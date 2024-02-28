@@ -1,9 +1,8 @@
-let inputForm = document.querySelector("form");
-let input = document.querySelector("input");
-let mealContainer = document.querySelector(".meal-container");
+let randomContainer = document.querySelector(".meal-container");
+let randomBtn = document.querySelector(".randomBtn");
 
 
-let API_URL = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
+let RANDOM_API_URL = "https://www.themealdb.com/api/json/v1/1/random.php";
 
 
 const makeList = (meal)=>{
@@ -52,21 +51,10 @@ const makeUI = (meal, list) => {
 }
 
 
-const fetchRecipe = async(e)=>{
-    e.preventDefault();
-
-
-    //Show search GIF 
-    let searchGIFHTML = `
-            <img src="../images/search.gif"/>
-            <h1>Search For Your Recipe</h1>
-    `
-
-    mealContainer.innerHTML=searchGIFHTML;
-    
-    
+const fetchRecipe = async()=>{
+  
     //call API
-    let response = await fetch(API_URL + input.value);
+    let response = await fetch(RANDOM_API_URL);
     let data = await response.json();
 
     //Check data 
@@ -80,7 +68,7 @@ const fetchRecipe = async(e)=>{
    
 
     //Show the list
-    mealContainer.innerHTML =html;}
+    randomContainer.innerHTML =html;}
 
    else{
     let sorryGIFHTML = `
@@ -88,8 +76,10 @@ const fetchRecipe = async(e)=>{
             <h2>We are unable to find your recipe...</h2>
     `;
 
-    mealContainer.innerHTML= sorryGIFHTML;
+    randomContainer.innerHTML= sorryGIFHTML;
    }
 };
 
-inputForm.addEventListener("submit", fetchRecipe);
+fetchRecipe();
+
+randomBtn.addEventListener("click", fetchRecipe);
