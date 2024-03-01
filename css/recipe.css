@@ -101,3 +101,30 @@
     margin-bottom: 20px;
 }
 
+.ingredients-container{
+    width: 100%;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.ingredients-container .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 400px;
+    height: 600px;
+    padding: 40px;
+    background-color: var(--yellow);
+    border-radius: 20px;
+}
+
+.ingredients-container .card h1{
+    font-family: cursive;
+    font-size: 40px;
+}
+
+.ingredients-container .card img{
+    width: 100%;
+}

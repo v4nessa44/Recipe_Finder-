@@ -7,6 +7,7 @@
     <title>Recipe Finder</title>
     <link rel="stylesheet" href="../css/global.css"/>
     <link rel="stylesheet" href="../css/about.css"/>
+    <link rel="stylesheet" href="../css/recipe.css"/>
 </head>
 <body>
     <nav>
@@ -18,11 +19,29 @@
 
         <div class="nav-links">
             <a href="../index.html">Home</a>
-            <a href="about.html" class="active">About</a>
-            <a href="exploreus.html">Explore</a>
+            <a href="about.html" >About</a>
+            <a href="exploreus.html" class="active">Explore</a>
             <a href="contact.html">Contact</a>
            
         </div>
     </nav>
+
+    <div class="recipe-container">
+        <form class="input-container">
+            <input type="text" placeholder="Find your Meal By The ingredient"/>
+        </form>
+
+        <div class="ingredients-container">
+            <div class="card">
+                <img src="https://www.themealdb.com/images/media/meals/vwrpps1503068729.jpg"  alt="text" />
+                <h1>Meal Name</h1>
+                <a href="detail.html">See Details</a>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../js/ingredient.js"></script>
+    
 </body>
-</html>
+</html> 
