@@ -1,17 +1,15 @@
 let inputFormEL = document.querySelector("form");
 let inputEL = document.querySelector("input");
 let mealContainerEL = document.querySelector(".ingredients-container");
-let closeBtn = document.querySelector(".close")
-let detailModal = document.querySelector(".detail-modal")
-
+let closeBtn = document.querySelector(".close");
+let detailModal = document.querySelector(".detail-modal");
+let modalContent = document.querySelector(".meal-container");
 
 let API_URL = "https://www.themealdb.com/api/json/v1/1/filter.php?i=";
 
 
-
 const fetchRecipe = async(e)=>{
     e.preventDefault();
-
 
     //Show search GIF 
     let searchGIFHTML = `
@@ -33,10 +31,6 @@ const fetchRecipe = async(e)=>{
     //Check data 
     if (data.meals){
         mealContainerEL.innerHTML = "";
-
-        let btn = document.createElement("button");
-
-        
 
         data.meals.map((meal)=>{
             let html = `
@@ -67,12 +61,12 @@ const fetchRecipe = async(e)=>{
 
 
 function closeModal(){
-    detailModal.getElementsByClassName.display = "none";
+    detailModal.style.display = "none";
 }
 
 
 
-function showDetails(e){
+async function showDetails(e){
     console.log("details", e.target);
     if(e.target && e.target.className ==="detail-btn"){
         let mealId = e.target.id;
